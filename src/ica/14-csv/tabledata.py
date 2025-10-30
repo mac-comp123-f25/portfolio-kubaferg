@@ -9,10 +9,17 @@ def lookup_office (name, table):
         print(f"Sorry, no office information found for {name}.")
         return None, None
 
-def lookup_by_date (name, day, table):
-    
+def lookup_by_date (month, day, table):
+    day = str(day).strip()
+    month = month.strip()
 
-"""
+    for row in table:
+        if row.get('Month', '').strip().lower() == month.lower() and row.get('Day', '').strip() == day:
+            return row
+    print(f"Sorry, no data found for {month} {day}.")
+    return None
+
+    """
 Examples of how to process CSV files
 
 @author: Susan Fox
