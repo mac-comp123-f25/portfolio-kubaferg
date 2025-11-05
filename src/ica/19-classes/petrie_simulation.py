@@ -1,4 +1,4 @@
-"""
+ """
 Contains a simulation of the Petrie Multiplier that is based on classes.
 """
 
